@@ -11,6 +11,7 @@ console.log("Folder proiect", __dirname);
 
 app.set("view engine", "ejs");
 
+
 app.use("/resurse", express.static(__dirname+"/resurse"));
 
 // app.get("/ceva", function(req, res){
