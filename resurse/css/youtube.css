@@ -1,0 +1,35 @@
+.taburi-iframe{
+  display: flex;
+  position:relative;
+  margin-left:100px;
+}
+
+.taburi-iframe a{
+    margin:10px;
+    width: 150px;
+    height: 20px;
+    background-color: var(--lila-prafuit);
+    color:black;
+    border: 2px solid var(--lila-prafuit);
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    text-align: center;
+    
+}
+
+.container{
+    display:flex;
+    position:relative;
+    flex-direction: column;
+}
+
+.taburi-iframe a:hover{
+transition: all 0.7s linear;
+background-color: var(--roz-prafuit);
+}
+
+.container{
+    display:flex;
+    position:relative;
+    flex-direction: row;
+}

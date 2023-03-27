@@ -1,0 +1,236 @@
+----V1-----
+
+<!DOCTYPE html>
+<html lang="ro">
+ <head>
+ 
+   <meta charset="UTF-8"><!-- codificarea în memorie a caracterelor-->
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- va fi explicat când ajungem la CSS -->
+       <meta name="keywords" content="bijuterii, cercei, argint, colier"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+       <meta name="description" content="bijuterii din metale pretioase. "><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+       <meta name="author" content="Cosmina Barbu">  <!-- autorul/autoarea paginii--> 
+       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+       <link rel="manifest" href="/site.webmanifest">
+       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+       <meta name="msapplication-TileColor" content="#da532c">
+       <meta name="theme-color" content="#ffffff">
+
+ <title>Beyou concept</title>
+</head>
+ <body>
+    <header>
+  <h1>Bijuterii</h1>
+<nav> 
+    <ul>
+        <li><a href="#inele">Inele</a>
+        <ul>
+            <li><a href="#logodna">Inele de logodnă</a></li>
+            <li><a href="#verighete">Verighete</a></li>
+            <li><a href="#promise rings"><i lang="en">Promise rings</i></a></li>
+        </ul>
+        </li>
+ 
+        <li><a href="#coliere">Coliere</a></li>
+        <ul>
+            <li><a href= "#tennis">Coliere tennis</a></li>
+            <li><a href= "#initiala">Coliere cu inițiala</a></li>
+        </ul>
+        <li><a href="#bratari">Brățări</a></li>
+        <ul>
+            <li><a href="#permanente">Brățări permanente</a></li>
+            <li><a href="#btennis">Brățări tennis</a></li>
+            <!-- <li><a href="#pandantive">Brățări cu pandantive</a></li> -->
+            <li><a href="#picior">Brățări de picior</a></li>
+        </ul>
+        <li><a href="#cercei">Cercei</a></li>
+        <ul> 
+            <li><a href="#bebelusi">Cercei de bebeluși</a></li>
+            <li><a href="#pierce"><i lang="en">Nose rings</i></a></li>
+        </ul>
+    </ul>
+</nav>
+</header>
+<main>
+  <section id="inele">
+  <!-- <h2>Tipuri de inele disponibile </h2> -->
+ <!-- <p> 
+    In acest document vom avea impartirea in etape a proiectului cu detalii despre <i lang="en">tasks</i> si penalizări
+  </p> -->
+  <section id="logodna">
+    
+  </section>
+</section id="verighete">
+<h3> 
+    Tipuri de verighete
+</h3>
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, omnis voluptates reiciendis, repellendus qui ex libero reprehenderit excepturi molestiae maiores dignissimos! Iusto, voluptatem odit culpa debitis molestias soluta voluptatum beatae.</p>
+<!-- <p><strong> În saptămâna cu punctaj normal poate fi în continuare cu bonus în următoarele situații:
+</strong></p> -->
+<!-- <ol>
+    <li>
+        studentul a prezentat în săptămâna cu bonus dar avea greșeli sau taskuri incomplete și a decis să îndrepte situația
+    </li>
+    <li>
+        am reprogramat pe cineva din motive justificate:
+        <ul>
+ 
+         <li>probleme tehnice (unuia dintre noi nu ne-a mers calculatorul sau netul etc)</li>
+        <li> probleme administrative (nu a putut prezenta avand probleme cu căminul, cu secretariatul etc)</li>
+        <li> probleme de sănătate, e om serios și ar fi terminat complet tema dar s-a aglomerat cu alte materii etc.</li>
+        </ul>
+    </li>
+    <li>o amânare oficială, de comun acord cu toți studenții, fiind necesare explicații suplimentare la curs/laborator.
+    </li>
+</ol> -->
+<p><strong> 
+    <!-- Atentie! Perioada de punctaj normal nu va avea bonus aplicat dacă studentul se prezintă pentru prima oară cu etapa proiectului rezolvată și fără o amânare justificată. -->
+    Oferim și opțiunea de a realiza verighete la comandă! Pentru mai multe informații, vă așteptăm în locația noastră!
+</strong></p>
+<p><b>Bonusul</b> e în valoare de <span style="font-weight:bold;"><s>10%.</s><ins style="text-decoration:none;"> 15%</ins></span></p>
+<section id="logodna">
+    <h3> Alte precizari </h3>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corrupti deserunt inventore reprehenderit, mollitia repellendus. Veritatis perferendis quam quos temporibus ut mollitia odit pariatur hic iure voluptas eum, vitae ipsa?</p>
+</section>
+<section id="etape">
+    <h2>Etapele proitecului</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab quia quam aspernatur autem? A, sed aspernatur. Quibusdam itaque ea minus dolore! Temporibus minima perferendis unde nobis inventore repudiandae laudantium.</p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, nemo. Omnis eligendi nam ratione praesentium, reiciendis, voluptatibus eaque delectus assumenda error, mollitia similique doloribus nobis exercitationem. Eos voluptatem exercitationem alias.
+    </p>
+</section>
+</main>
+<footer>
+<address>
+    str florilor nr 14
+</address>
+</footer>
+  </body>
+</html>
+
+
+
+-----V2-----
+<!DOCTYPE html>
+<html lang="ro">
+ <head>
+ 
+   <meta charset="UTF-8"><!-- codificarea în memorie a caracterelor-->
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- va fi explicat când ajungem la CSS -->
+       <meta name="keywords" content="bijuterii, cercei, argint, colier"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+       <meta name="description" content="bijuterii din metale pretioase. "><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+       <meta name="author" content="Cosmina Barbu">  <!-- autorul/autoarea paginii--> 
+      <!--  <link rel="apple-touch-icon" sizes="180x180" href="resurse/ico/apple-touch-icon.png">
+       <link rel="icon" type="image/png" sizes="32x32" href="resurse/ico/favicon-32x32.png">
+       <link rel="icon" type="image/png" sizes="16x16" href="resurse/ico/favicon-16x16.png">
+       <link rel="manifest" href="/site.webmanifest">
+       <meta name="msapplication-TileColor" content="#da532c">
+       <meta name="theme-color" content="#ffffff"> -->
+       <link rel="apple-touch-icon" sizes="180x180" href="resurse/ico/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resurse/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resurse/ico/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+       <link rel="style sheet" href="resurse/css/general.css" type="text/css" />
+
+ <title>beYOU jewelery</title>
+</head>
+ <body>
+    <header>
+  <h1>Bijuterii</h1>
+<nav> 
+    <ul>
+        <li><a href="#inele">Inele</a>
+        <ul>
+            <li><a href="#logodna">Inele de logodnă</a></li>
+            <li><a href="#verighete">Verighete</a></li>
+            <li><a href="#promise rings"><i lang="en">Promise rings</i></a></li>
+        </ul>
+        </li>
+ 
+        <li><a href="#coliere">Coliere</a></li>
+        <ul>
+            <li><a href= "#tennis">Coliere tennis</a></li>
+            <li><a href= "#initiala">Coliere cu inițiala</a></li>
+        </ul>
+        <li><a href="#bratari">Brățări</a></li>
+        <ul>
+            <li><a href="#permanente">Brățări permanente</a></li>
+            <li><a href="#btennis">Brățări tennis</a></li>
+            <!-- <li><a href="#pandantive">Brățări cu pandantive</a></li> -->
+            <li><a href="#picior">Brățări de picior</a></li>
+        </ul>
+        <li><a href="#cercei">Cercei</a></li>
+        <ul> 
+            <li><a href="#bebelusi">Cercei de bebeluși</a></li>
+            <li><a href="#pierce"><i lang="en">Nose rings</i></a></li>
+        </ul>
+        <li><a href="#accesorii">Accesorii</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+  <section id="inele">
+  <!-- <h2>Tipuri de inele disponibile </h2> -->
+  <br/>
+  <figure> 
+    <picture> 
+         <source media="(max-width: 600px)" srcset="resurse/imagini/bijou1.jpeg">
+        <source media="(max-width: 1000 px)" srcset="resurse/imagini/bijou2.jpeg"> 
+          <img src="resurse/imagini/bijou.jpeg" alt="imagine-sigla" title="beYOU jewelery"/>
+    </picture>
+    <figcaption> Noua colecție! </figcaption>
+  </figure>
+<a href="http://www.google.com" target="_blank"> link extern</a>
+  <section id="logodna">
+    
+  </section>
+</section id="verighete">
+<!-- <h3> 
+    Tipuri de verighete
+</h3>
+-->
+<p><strong> 
+    Oferim și opțiunea de a realiza verighete la comandă! Pentru mai multe informații, vă așteptăm în locația noastră!
+</strong></p>
+<!-- <p><b>Bonusul</b> e în valoare de <span style="font-weight:bold;"><s>10%.</s><ins style="text-decoration:none;"> 15%</ins></span></p> -->
+<section id="logodna">
+    <!-- <h3> Alte precizari </h3> -->
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corrupti deserunt inventore reprehenderit, mollitia repellendus. Veritatis perferendis quam quos temporibus ut mollitia odit pariatur hic iure voluptas eum, vitae ipsa?</p>
+</section>
+<section id="verighete">
+   <!--  <h2>Etapele proitecului</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab quia quam aspernatur autem? A, sed aspernatur. Quibusdam itaque ea minus dolore! Temporibus minima perferendis unde nobis inventore repudiandae laudantium.</p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, nemo. Omnis eligendi nam ratione praesentium, reiciendis, voluptatibus eaque delectus assumenda error, mollitia similique doloribus nobis exercitationem. Eos voluptatem exercitationem alias.
+    </p>-->
+    <details><summary> Sunt bijuteriile noastre rezistente la apă? </summary>
+    <p> Da! </p></details>
+    <p>                                              </p>
+</section>
+</main>
+<footer>
+     <a href="#">link top</a>
+     <p>                  </p>
+<address>
+    <a href="mailto:cosmina36341@gmail.com">E-mail</a>
+    <p>                                              </p>
+    <a href="tel:+0724946416">Mobil</a>
+    <p>                                              </p>
+    <a href="skype:cosmina36341?userinfo">
+        Skype </a>
+    <p>                                              </p>
+    <a href="https://goo.gl/maps/nWF4QZ8NtJqjEo1r9" target="_blank"> Str. Bujorilor nr 6, sector 3, București</a>
+    <p>                                              </p>
+   <!-- pt bucata cod iframe iau din codul pus de ea pe teams-->
+</address>
+<small>Copyright &copy; <!--2 &lt; 3 --> <time datetime="2023-02-27">27 feb 2023</time></small>
+<!-- datetime e mai mult pt javascript-->
+</footer>
+  </body>
+</html>
+
+
+
+----------------------
+culoare pt complementary: #A88782

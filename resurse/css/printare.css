@@ -1,0 +1,148 @@
+#watermark,#absolut{
+    display: none;
+}
+
+#grid-pagina {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding:10px;
+}
+
+.celula {
+    background-color: lightblue;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+ul.meniu{
+    all: unset !important;
+}
+
+@media print {
+
+    #header, #footer{
+        border:none;
+    }
+
+h1{
+    page-break-after: always;
+    margin-top: 50%;
+    text-align:center;
+    margin-left:1cm;
+}
+
+
+
+#header{
+    margin-top: 50%;
+    text-align:center;
+    margin-left:1cm;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    page-break-after: always;
+}
+
+#grid-pagina{
+    font-size: 10px;
+    box-sizing:border-box;
+    page-break-before:always;
+    background-color: white;
+    display:block;
+    }
+
+    html, body {
+    width: 210mm;
+    overflow:visible !important;
+    }
+
+    #grid-pagina div:nth-child(5){
+    
+    page-break-before:always;
+   }
+   
+   ul.meniu li ul {
+    display: none;
+}
+
+.meniu {
+
+    page-break-after: always;
+}
+
+    #watermark
+    {
+        display: block;
+        position: fixed;/*apare pe toate paginile*/
+        bottom:0;
+        color:rgba(0,0,0,0.4);
+        right:0;
+    }
+
+    #watermark::after{
+        
+        opacity:0.4;
+        padding:5px;
+        display: block;
+        background: white;
+        border:3px solid black;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border-right:none;
+        content:"Copyright Barbu Cosmina";
+        width: 4cm;
+        height: 1 cm;
+        font-size: 0.4cm;
+    }
+
+    #outer, nav, video, img{
+        display:none;
+    }
+
+    #end{
+    page-break-before: always;
+
+}
+
+#banner {
+    display: block;
+    border: 4px solid black;
+    height: 30px;
+    width: 70%;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+@page {
+    size: A4 portrait;
+    margin-bottom:2cm;
+    margin-top:2cm;
+    counter-increment: page;
+        
+}
+
+@page:left{
+
+    margin-left:3cm;
+    margin-right:1cm;
+    border-radius: 20cm;
+}
+
+@page:right{
+
+    margin-right:3cm;
+    margin-left:1cm;
+}
+
+}

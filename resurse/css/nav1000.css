@@ -1,0 +1,18 @@
+body{
+    --menu-height: 45px;
+    --button-width: 100px;
+    }
+
+    #acasa-mediu{
+        display: block;
+    }
+
+    #acasa{
+        display: none;
+    }
+
+    a:hover .arrow { 
+        display: none;
+    }
+
+   

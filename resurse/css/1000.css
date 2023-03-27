@@ -1,0 +1,20 @@
+html{
+    font-size: 15px;
+}
+
+body{
+    --spacing: 30px;
+    --padding: 10px;
+}
+
+#grid-pagina{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "zona-1 zona-1  zona-1"
+                         "zona-8 zona-8  zona-8"
+                         "zona-3 zona-2  zona-4"
+                         "zona-5 zona-6  zona-7"
+                        ;
+     gap: 10px 5px;
+
+}
+
