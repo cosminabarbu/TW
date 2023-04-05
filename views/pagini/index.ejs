@@ -162,7 +162,7 @@
     </picture>
     <figcaption> Noua colecție!  </figcaption>
   </figure>
-  <p> Descărcați imaginea aici : <a href="resurse/imagini/bijou.jpeg" download="noua colecție">
+  <p> Descărcați imaginea aici : <a class="link" href="resurse/imagini/bijou.jpeg" download="noua colecție">
     <img src="resurse/imagini/bijou.jpeg" alt="Bijou"> 
   </a></p>
 
@@ -178,7 +178,7 @@
 <section id="logodna"> 
      <h3> Inele de logodnă </h3>
     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corrupti deserunt inventore reprehenderit, mollitia repellendus. Veritatis perferendis quam quos temporibus ut mollitia odit pariatur hic iure voluptas eum, vitae ipsa?</p>
-    <p>Pentru a alege cel mai potrivit inel de logodnă, vă recomandăm să aruncați o privire la sfaturile și metodele de măsurare descrise la acest link:<a href="https://www.kultho.ro/despre-inele-de-logodna.html" target="_blank"> Tips and tricks </a> </p>
+    <p>Pentru a alege cel mai potrivit inel de logodnă, vă recomandăm să aruncați o privire la sfaturile și metodele de măsurare descrise la acest link:<a class="link" href="https://www.kultho.ro/despre-inele-de-logodna.html" target="_blank"> Tips and tricks </a> </p>
 </section>
 
 <section id="bijuterii">
@@ -190,8 +190,8 @@
     <div class="container">
       <div class="container-iframe" >
        <div class="taburi-iframe"> 
-        <a href="https://www.youtube.com/embed/Oc8jgyaBMkk" target="ifr-video"> Tutorial 1.</a>
-        <a href="https://www.youtube.com/embed/KxzLmQd9TPI" target="ifr-video"> Tutorial 2.</a></p>
+        <a class="link" href="https://www.youtube.com/embed/Oc8jgyaBMkk" target="ifr-video"> Tutorial 1.</a>
+        <a class="link" href="https://www.youtube.com/embed/KxzLmQd9TPI" target="ifr-video"> Tutorial 2.</a></p>
        </div>
       <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/Oc8jgyaBMkk" 
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -201,6 +201,26 @@
        
        </div>  
 </details>
+
+<div id="grid-galerie">
+  <% for (let imag of locals.imagini) {
+     d=new Date()
+     var v_luni=["ianuarie", "februarie", "martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"]
+     if(imag.luni && imag.luni.includes(v_luni[d.getMonth()])) {
+     %>
+          <figure>
+              <picture>
+                  <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
+                  <img src="<%- imag.fisier %>" alt="imagine">
+              </picture>
+              <figcaption><%- imag.descriere %></figcaption>
+          </figure>
+
+
+  <% }  %>
+<% }  %>
+</div>
+
     <p>                                              </p>
 </section>
 <div id="outer">

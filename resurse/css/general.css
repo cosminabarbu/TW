@@ -114,6 +114,12 @@ h1{
     font-family: 'Shantell Sans', cursive;
 }
 
+#promotii > h2{
+    font-family: 'Changa One', cursive;
+}
+
+
+
 #header, #footer{
     border: 3px solid palevioletred ;
     text-align: center;
@@ -171,5 +177,86 @@ main{
     background-color: var(--bej);
 }
 
+/* 
 
 
+a:link:active {
+    border: 1px solid var(--complement3);
+    color: var(--text-white);
+    transition: all 0.5s linear;
+}
+
+a:link[href^="http"]::before {
+    content: "⮳";
+    font-size: 1.5rem;
+}
+
+a:link[href^="http"]:hover::before {
+    color: var(--background-negru);
+    transition: color 0.35s linear;
+} 
+a:link:hover {
+    background-size: 100%;
+    color: var(--complement2);
+    background-image: radial-gradient(#02979c85 40%, #8fd5cf00 80%, #8fd5cf00 100%);
+    background-size: 100%;
+    transition: all 1s linear;
+}*/
+
+/* a.link:hover{
+    color: #202861;
+    background-image: radial-gradient(var(--bleu) 40%, #8fd5cf00 80%, #8fd5cf00 100%);
+    transition: all 1s linear;
+    border-radius: 3px;
+    background-size: 100%;
+} */
+
+a.link:hover{
+    background-size: 10%;
+    color: #8fd5cf00;
+    background-image: radial-gradient(
+                                     var(--bleu) 0%,
+                                     var(--bleu) 40%,
+                                     transparent 80%,
+                                     transparent 100%);
+    transition: all 1s linear;
+    
+}
+
+a.link:visited{
+    color: #8fd5cf00;
+}
+
+a.link:active {
+    border: 1px solid black;
+    transition: all 0.5s linear;
+}
+
+a:link[href^="http"]::before{
+    content: "⮳";
+    font-size: 1.5em;
+}
+
+a:link[href^="http"]:hover::before{
+    color: var(--bleu);
+    transition: color 0.3s linear;
+}
+
+video {
+    max-width: 700px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    min-height: 200px;
+    min-width: 250px;
+}
+
+::cue {
+    background-color: white;
+
+    opacity: 0.3;
+}
+
+::cue {
+    color: black;
+}
