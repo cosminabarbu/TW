@@ -4,7 +4,7 @@
 		{
 			"fisier":"briose-frisca.png",
 			"descriere":"Brioșe",
-			"luni":["martie","februarie","noiembrie"]
+			"luni":["martie","mai","noiembrie"]
 		},
 		{
 			"fisier":"clatite.png",
@@ -34,6 +34,26 @@
 		{
 			"fisier":"tort-trandafiri.png",
 			"descriere":"Tort special"
+		},
+		{
+		 	"fisier":"cercei.png",
+     		"descriere": "Cercei cu quartz roz",
+	 		"luni": ["mai", "iunie", "iulie", "septembrie"]
+	    },
+		{
+			"fisier":"inel-diamant.png",
+			"descriere": "Inel cu diamant",
+			"luni": ["ianuarie", "februarie", "martie", "aprilie","mai", "iunie", "iulie","august","septembrie","octombrie","noiembrie","decembrie"]
+		},
+		{
+			"fisier": "promise-ring.png",
+			"descriere": "Promise ring",
+			"luni":["februarie", "martie", "decembrie"]
+		},
+		{
+			"fisier":"colier-tennis.png",
+			"descriere": "Colier tennis",
+			"luni": ["mai", "iunie"]
 		}
-	]
+]
 }

@@ -6,10 +6,21 @@
 #grid-galerie {
  display:grid;
  grid-template-columns: repeat(3,1fr);
+ grid-template-areas: 
+ ". z-gol ."
+ "z-gol2 . z-gol2"
+ ". z-gol ."
+ "z-gol2 . z-gol2"
+ ;
  grid-row-gap:0.5em;
  grid-column-gap:0.5em;
- counter-reset: nrimag 3;  /* nrimag=3 */
+ counter-reset: nrimag 0;  /* nrimag=3 */
 }
+
+
+
+
+
 #grid-galerie img{
   width: 100%;
 }
@@ -19,11 +30,26 @@
 }
 
 #grid-galerie figcaption::before{
-  content: counter(nrimag, upper-alpha) ")";
+  content: counter(nrimag, lower-greek) ")";
+}
+
+#gol{
+  grid-area: z-gol;
+}
+
+#gol2{
+  grid-area: z-gol2;
 }
 
 @media screen and (max-width:500px){
   #grid-galerie {
       display:block;
   }
+}
+#gol{
+  display: none;
+}
+
+#gol2{
+  display: none;
 }
