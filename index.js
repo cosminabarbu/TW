@@ -7,13 +7,13 @@ const {Client}=require('pg');
 
 var client= new Client({database:"bdshop",
         user:"cosmina",
-        password:"parola",
+        password:"Cristi1995",
         host:"localhost",
         port:5432});
 client.connect();
 
 
-client.query("select * from lab8_12", function(err, rez){
+client.query("select * from prajituri", function(err, rez){
     console.log("Eroare BD",err);
  
     console.log("Rezultat BD",rez.rows);
