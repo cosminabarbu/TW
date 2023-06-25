@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+ <head>
+ 
+  
+       
+       <meta name="keywords" content="bijuterii, cercei, argint, colier, inel, verighetă"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+       <meta name="description" content="bijuterii din metale pretioase. inele de logodnă, verighete. coliere din perle naturale. "><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+       
+       <title>beYOU jewelery</title>
+       <!-- <button id="tema" class="btn btn-secondary">theme</button> -->
+       
+       <%- include("../fragmente/head.ejs") %>
+
+      
+      
+
+</head>
+<body>
+ <%- include("../fragmente/header.ejs") %>
+
+<main>
+
+<div id="grid-galerie">
+  <% for (let imag of locals.imagini) {
+     d=new Date()
+     var v_luni=["ianuarie", "februarie", "martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"]
+     if(imag.luni && imag.luni.includes(v_luni[d.getMonth()])) {
+     %>
+          <figure>
+              <picture>
+                  <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
+                  <img src="<%- imag.fisier %>" alt="imagine">
+              </picture>
+              <figcaption><%- imag.descriere %></figcaption>
+          </figure>
+
+
+  <% }  %>
+<% }  %>
+</div>
+</main>
+
+<%- include("../fragmente/footer.ejs") %>
+
+  </body>
+</html>

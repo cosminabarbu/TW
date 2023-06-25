@@ -21,10 +21,11 @@
     display:flex;
     position:relative;
     flex-direction: column;
+    justify-content: center;
 }
 
 .taburi-iframe a:hover{
-transition: all 0.7s linear;
+transition: all 0.1s linear;
 background-color: var(--roz-prafuit);
 }
 

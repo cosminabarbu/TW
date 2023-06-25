@@ -8,7 +8,7 @@
        <meta name="description" content="bijuterii din metale pretioase. inele de logodnă, verighete. coliere din perle naturale. "><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
        
        <title>beYOU jewelery</title>
-       <button class="btn btn-primary">ceva</button>
+       <!-- <button id="tema" class="btn btn-secondary">theme</button> -->
        <%- include("../fragmente/head.ejs") %>
 
       
@@ -17,7 +17,10 @@
 </head>
 <body>
  <%- include("../fragmente/header.ejs") %>
- 
+ <br><br>
+ <div class="miscator">
+  • Cercei • Brățări • Coliere • Inele • Verighete • Nose rings • Cercei pentru bebeluși • Inele de logodnă • Accesorii • Brățări de picior • 
+ </div>
 
 <main id="grid-pagina">
   <!-- <h1>Bijuterii</h1> -->
@@ -29,13 +32,17 @@
         <p> 
           <!-- ip: <%- locals.a + locals.b %> -->
         </p>
+        <div id="duotone"> </div>
 </section>
+
 <section id="zona-3">
     <h2>Zona 3</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, reiciendis optio nulla laborum unde
         impedit excepturi consectetur! Delectus et beatae fugit, nisi laudantium fugiat tenetur minus adipisci
         recusandae, maxime ad.</p>
+
 </section>
+
 <section id="zona-2">
     <h2>Zona 2</h2>
     
@@ -170,12 +177,14 @@
 
 <section id="verighete"> 
  <h3> Verighete </h3>
+ <hr>
 <p> În incinta magazinului nostru puteți găsi diferite modele de verighete, realizate atât din aur, cât și din argint, sau chiar și  diamante aplicate. </p>
 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quis soluta vero dicta consequuntur itaque odit temporibus suscipit, porro voluptas, doloremque autem aperiam cupiditate minima architecto esse in. Quos, nostrum.</p>
 <p><strong> 
     Oferim și opțiunea de a realiza verighete la comandă! Pentru mai multe informații, vă așteptăm în locația noastră!
 </strong></p>
  <p>De asemenea, oferim și o reducere în valoare de <span style="font-weight:bold;"><s>10%.</s><ins style="text-decoration:none;"> 15%</ins></span> pentru cuplurile care cumpără și inelul de logodnă din magazinul nostru.</p> 
+<hr>
 </section>
 <section id="logodna"> 
      <h3> Inele de logodnă </h3>

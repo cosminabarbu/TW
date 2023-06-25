@@ -5,15 +5,16 @@ const sharp = require('sharp');
 const sass=require('sass');
 const {Client}=require('pg');
 
-var client= new Client({database:"bdshop",
+var client= new Client({database:"bd",
         user:"cosmina",
-        password:"Cristi1995",
+        password:"parola",
         host:"localhost",
         port:5432});
+        
 client.connect();
 
 
-client.query("select * from prajituri", function(err, rez){
+client.query("select * from bijuterii", function(err, rez){
     console.log("Eroare BD",err);
  
     console.log("Rezultat BD",rez.rows);
@@ -54,7 +55,7 @@ app.get("/produse",function(req, res){
     //TO DO se adauaga filtrarea dupa tipul produsului
     //TO DO se selecteaza si toate valorile din enum-ul categ_prajitura
 
-    client.query("select * from unnest(enum_range(null::categ_prajitura))", function(err,rezCateg){
+    client.query("select * from unnest(enum_range(null::categ_bijuterie))", function(err,rezCateg){
         if(err){
             console.log(err);
             afiseazaEroare(res, 2);
@@ -64,7 +65,7 @@ app.get("/produse",function(req, res){
             if(req.query.tip)    
                 conditieWhere= ` where tip_produs='${req.query.tip}' `;  //"where tip='"+req.query.tip+"'" 
     
-            client.query("select * from prajituri"+conditieWhere , function( err, rez){
+            client.query("select * from bijuterii"+conditieWhere , function( err, rez){
                 //console.log(300)
                 if(err){
                     console.log(err);
@@ -87,9 +88,9 @@ app.get("/produse",function(req, res){
 
 
 app.get("/produs/:id",function(req, res){
-    console.log(req.params);
+    // console.log(req.params);
    
-    client.query(`select * from prajituri where id=${req.params.id}`, function( err, rezultat){
+    client.query(`select * from bijuterii where id=${req.params.id}`, function( err, rezultat){
         if(err){
             console.log(err);
             afiseazaEroare(res, 2);
@@ -113,6 +114,7 @@ app.set("view engine", "ejs");
 app.use("/resurse", express.static(__dirname + "/resurse"));
 //express.static e o functie care returneaza un obiect
 //asa "livrez" resursele pentru site 
+
 app.use("/node_modules", express.static(__dirname + "/node_modules"));
 
 app.use("/*",function(req, res, next){
@@ -142,7 +144,9 @@ app.get("/promotii", function(req, res){
     res.render("pagini/promotii");
 })
 
-
+app.get("/galerie", function (req, res) {
+    res.render("pagini/galerie.ejs", {imagini: obGlobal.obImagini.imagini});
+});
 
 
 app.get("/*.ejs",function(req, res){
@@ -176,17 +180,22 @@ function compileazaCss(caleScss, caleCss){
       caleCss=path.join(obGlobal.folderCss, caleCss)
     ///la acest punct avem cai absolute in caleScss si caleCss
 
-    console.log("cale:", caleCss);
+    // console.log("cale:", caleCss);
     
-    let vectorCale=caleCss.split("\\");
-    let numeFisCss=vectorCale[vectorCale.length-1];
+    // let vectorCale=caleCss.split("\\");
+    // let numeFisCss=vectorCale[vectorCale.length-1];
+   let caleBackup = path.join(obGlobal.folderBackup, "resurse/css");
+   if(fs.existsSync(caleBackup))
+   fs.mkdirSync(caleBackup, {recursive: true});
+
+    let numeFisCss=path.basename(caleCss);
     if(fs.existsSync(caleCss)){
         fs.copyFileSync(caleCss, path.join(obGlobal.folderBackup,numeFisCss)) //+(new Date()).getTime()
     }
 
     rez=sass.compile(caleScss, {"sourceMap":true});
     fs.writeFileSync(caleCss, rez.css)
-    console.log("compilare scss", rez);
+    // console.log("compilare scss", rez);
 }
 
 //compileazaScss("a.scss");
@@ -211,7 +220,7 @@ fs.watch(obGlobal.folderScss, function(eveniment, numeFis){
 
 app.get("/*", function(req, res){
     try{
-    console.log(req.url);
+    // console.log(req.url);
     res.render("pagini"+req.url, function(err, rezRandare){
         if(err){
          if(err.message.startsWith("Failed to lookup view"))
@@ -223,7 +232,7 @@ app.get("/*", function(req, res){
         // res.send("Eroare");
         }
         else{
-            console.log(rezRandare);
+            // console.log(rezRandare);
             res.send(rezRandare);
         }
     });
@@ -256,9 +265,14 @@ function initializeazaErori(){
     let vImagini=obGlobal.obImagini.imagini;
     let caleAbs=path.join(__dirname,obGlobal.obImagini.cale_galerie);
     let caleAbsMediu=path.join(caleAbs,"mediu");
+    let caleAbsMic=path.join(caleAbs, "mic");
     //
     if(!fs.existsSync(caleAbsMediu))
     fs.mkdirSync(caleAbsMediu);
+
+    if(!fs.existsSync(caleAbsMic))
+    fs.mkdirSync(caleAbsMic);
+
 
 
 
@@ -268,9 +282,13 @@ function initializeazaErori(){
         [numeFis, ext]=imag.fisier.split("."); 
         imag.fisier_mediu="/"+path.join(obGlobal.obImagini.cale_galerie, "mediu", numeFis+".webp");
         // 
+        imag.fisier_mic="/"+path.join(obGlobal.obImagini.cale_galerie, "mic", numeFis+".webp");
+
         let caleAbsFisMediu= path.join(__dirname,imag.fisier_mediu)
         sharp(path.join(caleAbs, imag.fisier)).resize(400).toFile(caleAbsFisMediu);
 
+        let caleAbsFisMic=path.join(__dirname,imag.fisier_mic)
+        sharp(path.join(caleAbs, imag.fisier)).resize(200).toFile(caleAbsFisMic);
  
         //eroare.imagine="/"+obGlobal.obErori.cale_baza + "/" + eroare.imagine;
 

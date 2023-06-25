@@ -2,46 +2,46 @@
 	"cale_galerie":"resurse/imagini/galerie",
 	"imagini": [
 		{
-			"fisier":"briose-frisca.png",
-			"descriere":"Brioșe",
+			"fisier":"gold.png",
+			"descriere":"Colier cu pandantive aurii cu model vintage",
 			"luni":["martie","mai","noiembrie"]
 		},
 		{
-			"fisier":"clatite.png",
-			"descriere":"Clătite cu dulceață",
+			"fisier":"pandantiv.png",
+			"descriere":"Colier cu pandantiv cu piatra prețioasă",
 			"luni":["ianuarie","februarie","iunie", "aprilie"]
 			
 		},
 		{
-			"fisier":"gogosi.png",
+			"fisier":"c-gold.png",
 			"descriere":"Gogoși glazurate",
 			"luni":["ianuarie","noiembrie","iunie","martie", "aprilie"]
 		},
 		{
-			"fisier":"tort-scortisoara.png",
+			"fisier":"verighete.png",
 			"descriere":"Tort cu scorțisoară",
 			
 			"luni":["noiembrie"]
 		},
 		{
-			"fisier":"prajitura-ciocolata.png",
+			"fisier":"ruby.png",
 			"descriere":"Prăjitură cu ciocolată"
 		},
 		{
-			"fisier":"tarta-afine.png",
+			"fisier":"b-pandantiv.png",
 			"descriere":"Tartă cu afine"
 		},
 		{
-			"fisier":"tort-trandafiri.png",
+			"fisier":"c-mari.png",
 			"descriere":"Tort special"
 		},
 		{
-		 	"fisier":"cercei.png",
+		 	"fisier":"cercei-roz.png",
      		"descriere": "Cercei cu quartz roz",
 	 		"luni": ["mai", "iunie", "iulie", "septembrie"]
 	    },
 		{
-			"fisier":"inel-diamant.png",
+			"fisier":"logodna.png",
 			"descriere": "Inel cu diamant",
 			"luni": ["ianuarie", "februarie", "martie", "aprilie","mai", "iunie", "iulie","august","septembrie","octombrie","noiembrie","decembrie"]
 		},
@@ -51,7 +51,7 @@
 			"luni":["februarie", "martie", "decembrie"]
 		},
 		{
-			"fisier":"colier-tennis.png",
+			"fisier":"c-tennis.png",
 			"descriere": "Colier tennis",
 			"luni": ["mai", "iunie"]
 		}

@@ -8,22 +8,23 @@
  grid-template-columns: repeat(3,1fr);
  grid-template-areas: 
  ". z-gol ."
- "z-gol2 . z-gol2"
- ". z-gol ."
- "z-gol2 . z-gol2"
+ "z-gol2 . z-gol3"
+ ". z-gol1 ."
+ "z-gol4 . z-gol5"
  ;
  grid-row-gap:0.5em;
  grid-column-gap:0.5em;
  counter-reset: nrimag 0;  /* nrimag=3 */
 }
 
-
-
-
+#grid-galerie figure {
+  padding: 1em;
+}
 
 #grid-galerie img{
   width: 100%;
 }
+
 #grid-galerie figcaption{
   text-align:center;
   counter-increment: nrimag 2; /* nrimag+=2 */
@@ -33,23 +34,100 @@
   content: counter(nrimag, lower-greek) ")";
 }
 
+#grid-galerie img:hover figcaption{
+animation-name: animatie_caption;
+display: block;
+animation-duration: 0.7s;
+animation-timing-function: linear;
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
+transform-origin: center top;
+} 
+
+@keyframes animatie_caption{
+  0%{
+      opacity: 0;
+      transform: scale(0.5, 0);
+  }
+  50%{
+      transform: scale(0.5, 1);
+  }
+  100%{
+      opacity: 1;
+      transform: scale(1, 1);
+  }
+}
+
+#grid-galerie img:hover{
+  filter: brightness(200%);
+  transition: all 1.1s linear;
+}
+
 #gol{
   grid-area: z-gol;
+}
+
+#gol1{
+  grid-area: z-gol1;
 }
 
 #gol2{
   grid-area: z-gol2;
 }
+#gol3{
+  grid-area: z-gol3;
+}
+
+#gol4{
+  grid-area: z-gol4;
+}
+
+#gol5{
+  grid-area: z-gol5;
+}
+
+@media screen and (max-width: 1000px) {
+  #grid-galerie{
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-areas:
+      ". ."
+      ". ."
+      ". ."
+      ". ."
+      ". .";
+  }
+}
 
 @media screen and (max-width:500px){
   #grid-galerie {
-      display:block;
+      display:grid;
+      grid-template-columns: repeat(1,1fr);
+      grid-template-areas: 
+      " . "
+      " . "
+      " . "
+      " . "
+      " . "
+      ;
   }
 }
 #gol{
   display: none;
 }
 
+#gol1{
+  display: none;
+}
 #gol2{
+  display: none;
+}
+#gol3{
+  display: none;
+}
+#gol4{
+  display: none;
+}
+#gol5{
   display: none;
 }
