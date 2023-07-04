@@ -8,11 +8,19 @@ body{
    --bej: #DEB6B8;
    --bleu: #D2D4FA;
    --galben: #FFFDD1;
+   --fucsia: #d63384;
+   --praz: #D3F6E4;
 }
 
 body.dark{
     background-color: var(--culoare-text);
     color: var(--bej);
+}
+
+body.temaa{
+    
+    background-color: var(--praz);
+    color: var(--fucsia);
 }
 
 body{
@@ -313,7 +321,6 @@ hr::before {
     height: 16px;
     background-image: radial-gradient(white 1%, palevioletred 55%, transparent 1%);
     background-size: 16px 16px;
-    /* background-repeat: repeat-x; */
     background-position-x: 12px;
     top: 8%;
     filter: blur(0.6px);
@@ -328,7 +335,6 @@ hr::after {
     height: 16px;
     background-image: radial-gradient(white 10%, var(--bleu) 35%, transparent 30%);
     background-size: 16px 16px;
-    /* background-repeat: repeat-x; */
     top: 15%;
     background-position-x: -10px;
     filter: blur(0.4px);
@@ -341,7 +347,8 @@ hr::after {
     white-space: nowrap;
     animation: floatText 20s infinite linear;
     padding-left: 100%; /*Initial offset, which places the text off-screen */
-    color: var(--culoare-text);
+    /* color: var(--culoare-text); */
+    color: var(--fucsia);
   }
 
   @keyframes floatText {

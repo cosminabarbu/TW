@@ -1,12 +1,9 @@
-// @use '../../node_modules/bootstrap/scss/bootstrap.scss' with (
-//     $primary: magenta, 
-//     $secondary: purple
-// )
+
 @use '../../node_modules/bootstrap/scss/bootstrap.scss' with
 (
    
     // culorile de background
-    $primary: pink,
+    $primary:  #d63384,
     $secondary: purple,
 
     // culori font

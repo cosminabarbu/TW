@@ -10,11 +10,19 @@ var client= new Client({database:"bd",
         password:"parola",
         host:"localhost",
         port:5432});
+
+
         
 client.connect();
 
 
 client.query("select * from bijuterii", function(err, rez){
+    console.log("Eroare BD",err);
+ 
+    console.log("Rezultat BD",rez.rows);
+});
+
+client.query("select * from elevi", function(err, rez){
     console.log("Eroare BD",err);
  
     console.log("Rezultat BD",rez.rows);
@@ -47,6 +55,21 @@ app= express();
 console.log("Folder proiect: ", __dirname);
 console.log("Cale fisier: ", __filename);
 console.log("Director de lucru: ", process.cwd());
+
+// app.get("/elevi", function(req,res){
+//     client.query("select * from elevi", function( err, rez){
+//         //console.log(300)
+//         if(err){
+//             console.log(err);
+//             afiseazaEroare(res, 2);
+//         }
+//         else{
+//             console.log(rez);
+//             res.render("pagini/elevi", {elevi:rez.rows,optiuni:[]});
+
+//         }
+// });
+// });
 
 app.get("/produse",function(req, res){
 
@@ -100,6 +123,18 @@ app.get("/produs/:id",function(req, res){
     });
 });
 
+// app.get("/elev/:id",function(req, res){
+//     // console.log(req.params);
+   
+//     client.query(`select * from elevi where id=${req.params.id}`, function( err, rezultat){
+//         if(err){
+//             console.log(err);
+//             afiseazaEroare(res, 2);
+//         }
+//         else
+//             res.render("pagini/elev", {elev:rezultat.rows[0]});
+//     });
+// });
 // client.query("select * from unnest(enum_range(null::categ_prajitura))",function(err, rez){
 //     console.log(err);
 //     console.log(rez);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <!-- <script type="text/javascript" src=/resurse/js/elevi.js></script> -->
+<title> ELEVI </title>
+<body>
+<main>
+    <article id="art-elev">
+     <h2> Nume :<span class="nume"> <%- locals.elev.nume %> </span></h2>
+     <h2> Prenume :<span class="prenume"> <%- locals.elev.prenume %> </span></h2>
+     <p>Clasa: <span class="clasa"> <%- locals.elev.clasa %> </span></p>
+     <p>Note:<span class="nota"></span></p>
+        <% const numere=elev.note.split(",").map(Number); 
+        var suma=0; 
+        for (let i = 0; i < numere.length; i++) {
+            suma = suma + numere[i]; %>
+            <li> <%- numere[i] %> </li>
+        <% } %>
+        <% var media=suma/numere.length;
+        var rezultat = media.toFixed(2); %>
+        <p> Media: <span class="media"> <%- rezultat %> </span> </p>
+
+    </article>
+</main>
+
+</body>
+</html>

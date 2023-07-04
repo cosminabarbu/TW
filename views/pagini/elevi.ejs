@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+<link rel="stylesheet" href="/resurse/css/elevi.css" type="text/css" />  
+</head>
+<body>
+    <main>
+    <!-- <h2>
+        Elevi
+    </h2> -->
+<div class="grid-elevi">
+    <%for (let elev of locals.elevi) { %>
+    <article class="elevi" >
+        <h2 class="nume"> Nume: <a href="/elev/<%-elev.id %>"> <span class="val-nume"><%- elev.nume %></span></a></h2>
+        <h2 class="prenume"> Prenume: <a href="/elev/<%-elev.id %>"> <span class="val-prenume"><%- elev.prenume %></span></a></h2>
+        <p class="clasa">Clasa: <span class="val-clasa"><%- elev.clasa%></span></p>
+        <p class="nota">Note:<span class="val-nota"></span></p>
+        <% const numere=elev.note.split(",").map(Number); 
+        var suma=0; 
+        for (let i = 0; i < numere.length; i++) {
+            suma = suma + numere[i]; %>
+            <li> <%- numere[i] %> </li>
+        <% } %>
+        <% var media=suma/numere.length;
+        var rezultat = media.toFixed(2); %>
+        <p class="media"> Media: <%- rezultat %> </p>
+        
+    </article>
+    <% } %>
+
+</div>
+</main>
+</body>
+
+
+
+</html>

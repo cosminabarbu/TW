@@ -14,26 +14,25 @@
 		},
 		{
 			"fisier":"c-gold.png",
-			"descriere":"Gogoși glazurate",
+			"descriere":"Cercei suflați cu aur",
 			"luni":["ianuarie","noiembrie","iunie","martie", "aprilie"]
 		},
 		{
 			"fisier":"verighete.png",
-			"descriere":"Tort cu scorțisoară",
-			
+			"descriere":"Verighete suflate cu aur",
 			"luni":["noiembrie"]
 		},
 		{
 			"fisier":"ruby.png",
-			"descriere":"Prăjitură cu ciocolată"
+			"descriere":"Inel cu rubin"
 		},
 		{
 			"fisier":"b-pandantiv.png",
-			"descriere":"Tartă cu afine"
+			"descriere":"Brățară cu pandantiv"
 		},
 		{
 			"fisier":"c-mari.png",
-			"descriere":"Tort special"
+			"descriere":"Cercei supradimensionați"
 		},
 		{
 		 	"fisier":"cercei-roz.png",

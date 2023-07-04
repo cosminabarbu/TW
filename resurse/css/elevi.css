@@ -1,0 +1,43 @@
+.grid-elevi {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    ;
+    grid-row-gap: 10px;
+    grid-column-gap:10px;
+    /* counter-reset: nrimag 0;  nrimag=3 */
+   }
+
+        .elevi:nth-child(9n+1),
+        .elevi:nth-child(9n+9) {
+            background-color: #45bab5;
+        }
+        
+        .elevi:nth-child(9n+2),
+        .elevi:nth-child(9n+4),
+        .elevi:nth-child(9n+6),
+        .elevi:nth-child(9n+8) {
+            background-color: #c86b6f;
+        }
+        
+        .elevi:nth-child(9n+3),
+        .elevi:nth-child(9n+5),
+        .elevi:nth-child(9n+7){
+            background-color: #6b99c8;
+        }
+   @media screen and (max-width: 1000px) {
+    #elevi{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:
+        ". ."
+        ". ."
+        ". ."
+        ". ."
+        ". .";
+    }
+  }

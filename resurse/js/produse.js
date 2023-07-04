@@ -1,5 +1,6 @@
 window.addEventListener("load", function(){
 
+
     document.getElementById("inp-pret").onchange=function(){
         document.getElementById("infoRange").innerHTML=`(${this.value})`;
     }
@@ -8,19 +9,19 @@ window.addEventListener("load", function(){
 
         //input-uri
         let val_nume=document.getElementById("inp-nume").value.toLowerCase();
-
-        let calorii = document.getElementsByName("gr_rad");
-        let val_calorii;
-        for(let r of calorii){
+        let val_gramaj;
+        let gramaj = document.getElementsByName("gr_rad");
+        
+        for(let r of gramaj){
             if(r.checked){
-                val_calorii=r.value;
+                val_gramaj=r.value;
             }
         }
         
-        if(val_calorii!="toate"){
-            [cal_a, cal_b] = val_calorii.split(":"); //le desparte dar sunt stringuri
-           var cal_a = parseInt(cal_a);
-           var cal_b = parseInt(cal_b); // convertim din string in int
+        if(val_gramaj!="toate"){
+            [gr_a, gr_b] = val_gramaj.split(":"); //le desparte dar sunt stringuri
+           var gr_a = parseInt(gr_a);
+           var gr_b = parseInt(gr_b); // convertim din string in int
         }
         //var le face disponibile oriunde
         //let le face disponibile doar in blocul curent de instructiuni
@@ -30,13 +31,14 @@ window.addEventListener("load", function(){
         let val_categ=document.getElementById("inp-categorie").value;
 
         var produse=document.getElementsByClassName("produs");
+        
         for(let prod of produse){
             prod.style.display="none";
 
             document.getElementById("resetare").onclick= function(){
        
+                if (confirm("Sunteti sigur ca doriti sa resetati filtrele?") == true) {
                 document.getElementById("inp-nume").value="";
-               
                 document.getElementById("inp-pret").value=document.getElementById("inp-pret").min;
                 document.getElementById("inp-categorie").value="toate";
                 document.getElementById("i_rad4").checked=true;
@@ -45,25 +47,26 @@ window.addEventListener("load", function(){
                 for (let prod of produse){
                     prod.style.display="block";
                 }
-            }
+            }}
 
-            function sortare(){
+            function sortare(semn){
                 var produse=document.getElementsByClassName("produs");
                 var v_produse = Array.from(produse);
 
                 v_produse.sort(function(a,b){
                     var pret_a = parseFloat(a.getElementsByClassName("val-pret")[0].innerHTML);
                     var pret_b = parseFloat(b.getElementsByClassName("val-pret")[0].innerHTML);
+                    
                     if(pret_a == pret_b){
                         var nume_a = a.getElementsByClassName("val-nume")[0].innerHTML;
                         var nume_b = b.getElementsByClassName("val-nume")[0].innerHTML;
-                        return nume_a.localeCompare(nume_b);
+                        return semn*(nume_a.localeCompare(nume_b));
                     }
-                    return pret_a - pret_b;
+                    return semn*(pret_a - pret_b);
                 })     
                 
                 for(let prod of v_produse){
-                    prod.parentElement.appendChild(prod);
+                    prod.parentElement.appendChild(prod); //il muta pe prod ca ultim copil al elem parinte
                 }
               }
 
@@ -71,13 +74,17 @@ window.addEventListener("load", function(){
                 sortare(1)
             }
 
+            document.getElementById("sortDescrescNume").onclick=function(){
+                sortare(-1)
+            }
+
             //valori din produs
             let nume=prod.getElementsByClassName("val-nume")[0].innerHTML.toLowerCase();
 
             let cond1=(nume.startsWith(val_nume));
 
-            let prod_calorii=parseInt(prod.getElementsByClassName("val-calorii")[0].innerHTML);
-            let cond2=(val_calorii=="toate" || cal_a <= prod_calorii && prod_calorii < cal_b);
+            let prod_gramaj=parseInt(prod.getElementsByClassName("val-gramaj")[0].innerHTML);
+            let cond2=(val_gramaj=="toate" || gr_a <= prod_gramaj && prod_gramaj < gr_b);
             
             let pret=parseFloat(prod.getElementsByClassName("val-pret")[0].innerHTML);
             let cond3=(val_pret <= pret)
@@ -116,7 +123,8 @@ window.addEventListener("load", function(){
                 let info = document.getElementById("info-suma");
                 if(info)
                 info.remove();
-            },1000) //1000 mili-sec
+            },1000) 
+            //1000 mili-sec
         }
     }
 

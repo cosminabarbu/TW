@@ -80,7 +80,7 @@ nav{
     #watermark
     {
         display: block;
-        position: fixed;/*apare pe toate paginile*/
+        position: fixed; /*apare pe toate paginile*/
         bottom:0;
         color:rgba(0,0,0,0.4);
         right:0;
@@ -143,6 +143,7 @@ nav{
 
     margin-right:3cm;
     margin-left:1cm;
+    /* margin: 20px; */
 }
 
 }
